@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Logegr</title>
+
+    <style type="text/css">
+        html, body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        .parent {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            overflow: auto;
+        }
+
+        .block {
+            width: 580px;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            margin: auto;
+        }
+    </style>
+
+</head>
+<body class = 'parent'>
+
+	<div class = 'block'>
+        <h1>Test page 1</h1>
+		<p style = 'text-align: center; vertical-align: center;'>Ви перейшли на цю сторінку з <strong>{{referrer}}</strong> <strong>{{time}}</strong> з IP адресою <strong>{{ ip }}</strong></p>
+        <a href = 'http://127.0.0.1:8000/'>Main Page</a><br>
+        <a href = 'http://127.0.0.1:8000/test2/'>Test Page 2</a>
+	</div>
+</body>
+</html>
