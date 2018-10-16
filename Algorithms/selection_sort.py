@@ -1,4 +1,4 @@
-print('Selection sort algoritm example')
+print('Selection sort algorithms example')
 
 def findSmallest(arr):
     smallest = arr[0]

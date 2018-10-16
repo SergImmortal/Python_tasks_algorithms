@@ -1,6 +1,6 @@
 import math
 
-print('Binary search algoritm example.')
+print('Binary search algorithms example.')
 
 def binary_search(target_list, item):
     low = 0
