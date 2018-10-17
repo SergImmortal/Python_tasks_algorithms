@@ -1,7 +1,9 @@
+from timing import timing
 import math
 
-print('Binary search algorithms example.')
+print('{color}Binary search algorithms example.{endcolor}'.format(color='\033[42m', endcolor='\033[0m'))
 
+@timing
 def binary_search(target_list, item):
     low = 0
     high = len(target_list)-1

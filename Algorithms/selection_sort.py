@@ -1,4 +1,6 @@
-print('Selection sort algorithms example')
+from timing import timing
+
+print('{color}Selection sort algorithms example{endcolor}'.format(color='\033[42m', endcolor='\033[0m'))
 
 def findSmallest(arr):
     smallest = arr[0]
@@ -9,6 +11,7 @@ def findSmallest(arr):
             smallest_index = i
     return smallest_index
 
+@timing
 def selectionSort(arr):
     newArr = []
     for i in range(len(arr)):

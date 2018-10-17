@@ -1,6 +1,6 @@
 from timing import timing
 
-print("Recursion solution for factorial.\n")
+print('{color}Recursion solution for factorial.{endcolor}\n'.format(color='\033[42m', endcolor='\033[0m'))
 
 def factorial(x):
     if x == 1:
@@ -13,16 +13,25 @@ def alias(x):
     return factorial(x)
 print(str(alias(200)) + "\n")
 
-
-print("Cycle solution for factorial.\n")
+print('{color}Cycle solution for factorial.{endcolor}\n'.format(color='\033[42m', endcolor='\033[0m'))
+print('{color}Cycle WHILE:{endcolor}\n'.format(color='\033[42m', endcolor='\033[0m'))
 
 @timing
-def factorialCycle(x):
+def factorialWhile(x):
     result = 1
     while x > 1:
         result *= x
         x -= 1
-    else:
-        return result
+    return result
 
-print(str(factorialCycle(200)) + "\n")
+print(str(factorialWhile(200)) + "\n")
+print('{color}Cycle FOR:{endcolor}\n'.format(color='\033[42m', endcolor='\033[0m'))
+
+@timing
+def factorialFor(x):
+    result = 1
+    for i in range(1, x):
+        result *= i
+    return result
+
+print(str(factorialFor(200)) + "\n")
