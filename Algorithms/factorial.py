@@ -1,7 +1,5 @@
 from timing import timing
 
-print('{color}Recursion solution for factorial.{endcolor}\n'.format(color='\033[42m', endcolor='\033[0m'))
-
 def factorial(x):
     if x == 1:
         return x
@@ -9,12 +7,8 @@ def factorial(x):
         return x * factorial(x-1)
 
 @timing
-def alias(x):
+def factorialRecursive(x):
     return factorial(x)
-print(str(alias(200)) + "\n")
-
-print('{color}Cycle solution for factorial.{endcolor}\n'.format(color='\033[42m', endcolor='\033[0m'))
-print('{color}Cycle WHILE:{endcolor}\n'.format(color='\033[42m', endcolor='\033[0m'))
 
 @timing
 def factorialWhile(x):
@@ -24,9 +18,6 @@ def factorialWhile(x):
         x -= 1
     return result
 
-print(str(factorialWhile(200)) + "\n")
-print('{color}Cycle FOR:{endcolor}\n'.format(color='\033[42m', endcolor='\033[0m'))
-
 @timing
 def factorialFor(x):
     result = 1
@@ -34,4 +25,12 @@ def factorialFor(x):
         result *= i
     return result
 
-print(str(factorialFor(200)) + "\n")
+if __name__ == '__main__':
+
+    print('{color}Recursion solution for factorial.{endcolor}\n'.format(color='\033[1;33m', endcolor='\033[0m'))
+    print(str(factorialRecursive(200)) + "\n")
+    print('{color}Cycle solution for factorial.{endcolor}\n'.format(color='\033[1;33m', endcolor='\033[0m'))
+    print('{color}Cycle WHILE:{endcolor}\n'.format(color='\033[1;33m', endcolor='\033[0m'))
+    print(str(factorialWhile(200)) + "\n")
+    print('{color}Cycle FOR:{endcolor}\n'.format(color='\033[1;33m', endcolor='\033[0m'))
+    print(str(factorialFor(200)) + "\n")

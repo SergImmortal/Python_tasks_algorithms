@@ -1,6 +1,5 @@
 from timing import timing
-
-print('{color}Selection sort algorithms example{endcolor}'.format(color='\033[42m', endcolor='\033[0m'))
+from test_data import unsorted_list
 
 def findSmallest(arr):
     smallest = arr[0]
@@ -19,4 +18,11 @@ def selectionSort(arr):
         newArr.append(arr.pop(smallest))
     return newArr
 
-print(selectionSort([5, 6, 3, 7, 1, 4, 2, 8]))
+
+if __name__ == '__main__':
+
+    print('{color}Selection sort algorithms example{endcolor}'.format(color='\033[1;33m', endcolor='\033[0m'))
+    
+    print(selectionSort([5, 6, 3, 7, 1, 4, 2, 8, 22, 35, 10, 99, 88, 95, 66, 25, 18, 98, 33, 37, 68, 55, 51, 59, 563, 999, 421, 684]))
+    print('{color}Selection sort algorithms with 10 000 entries in list.{endcolor}\n'.format(color='\033[1;33m', endcolor='\033[0m'))
+    selectionSort(unsorted_list)
